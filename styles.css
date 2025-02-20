@@ -1,0 +1,34 @@
+body {
+    font-family: "Roboto", serif;
+    display: flex;
+    flex-direction: column;   
+}
+
+h1 {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    gap: 200px;
+}
+
+.input {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.colourOption {
+    display: flex;
+    gap: 16px;
+}
+.sketchpad {
+    border-width: 8px;
+    width: 500px;
+    height: 500px;
+    background-color: blue;
+}
