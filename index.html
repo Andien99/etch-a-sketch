@@ -6,34 +6,48 @@
     <link rel="stylesheet" href="styles.css">
     <script src="script.js" defer></script>
     <title>Etch a Sketch</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <h1>Etch a Sketch</h1>
+    <h1 style="font-size: 40px;">Etch a Sketch</h1>
     <div class="container">
         <div class="input">
             <div class="size">
-                <p>Size Slider</p>
-                <div class="slideContainer">
-                    <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+                <div class="slider">
+                    <p class="label">Size Slider</p>
+                    <div class="slideContainer">
+                        <input type="range" min="1" max="100" value="50" class="slider" id="myRange"></div>
                 </div>
-                <p> __x__</p>
+                <p class="boxValues"> [___ by ____]</p>
             </div>
+            <p id="label_colour">Colour Choice</p>
             <div class="colourOption">
-                <p>Colour Choice</p>
-                <div class="colour black"></div>
+                <div class="colour_container">
+                    <div class="palette black" style="background-color: black;"></div>
                     <p>Black</p>
-                <div class="colour blue"></div>
+                </div>
+                <div class="colour_container" >
+                    <div class="palette blue" style="background-color: #277da1;"></div>
                     <p>Blue</p>
-                <div class="colour green"></div>
+                </div>
+                <div class="colour_container">
+                    <div class="palette green" style="background-color: #90be6d;"></div>
                     <p>Green</p>
-                <div class="colour red"></div>
+                </div>
+                <div class="colour_container">
+                    <div class="palette red" style="background-color: #f94144;"></div>
                     <p>Red</p>
-                <div class="eraser"></div>
+                </div>
+                <div class="colour_container">
+                    <div class="eraser"></div>
                     <p>Eraser</p>
+                </div>
             </div>
         </div>
         <div class="output"></div>
-            <div class="sketchpad">Clear Sketch</div>
+            <div class="sketchpad"></div>
     </div>
 </body>
 </html>

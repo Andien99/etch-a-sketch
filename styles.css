@@ -1,7 +1,13 @@
 body {
     font-family: "Roboto", serif;
     display: flex;
-    flex-direction: column;   
+    flex-direction: column;
+    background-color: #f9c74f;   
+}
+
+.roboto {
+    font-family: "Roboto", serif;
+    font-optical-sizing: auto;
 }
 
 h1 {
@@ -13,22 +19,83 @@ h1 {
 .container {
     display: flex;
     justify-content: center;
-    gap: 200px;
+    gap: 80px;
 }
 
 .input {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+    gap:32px
+}
+
+.size {
+    display: flex;
+    gap:32px;
+}
+
+.slider {
+    background-color: #219ebc;
+    border-radius: 16px;
+    padding: 16px;
+    border-style: solid;
+    border-color: #023047;
+    border-width: 2px;
+    height: 40px;
+    
+}
+
+.label {
+    text-align: center;
+    font-weight: 600;
+    font-size: 16px;
+    margin: 0px;
+}
+.slideContainer {
+    display: flex;
+    justify-content: center;
+}
+
+#myRange {
+    padding: 0px;
+    margin: 0px;
+}
+
+.boxValues {
+    font-size: 32px;
+}
+
+#label_colour {
+    font-size: 32px;
+    text-align: center;
+    font-weight: 700;
+    margin: 0px;
 }
 
 .colourOption {
     display: flex;
-    gap: 16px;
+    gap: 48px;
+    justify-content: space-evenly;
+}
+
+p {
+    font-size: 20px;
+    text-align: center;
+}
+
+.palette {
+    height:48px;
+    width: 48px;
+    border-radius: 12px;
+    border-style: solid;
+    border-width: 2px;
+    background-color: white;
 }
 .sketchpad {
-    border-width: 8px;
+    border-style: solid;
+    border-width: 2px;
     width: 500px;
     height: 500px;
-    background-color: blue;
+    border-radius: 16px;
+    background-color: white;
 }
