@@ -45,7 +45,7 @@ h1 {
     
 }
 
-.label {
+#displayDimensions {
     text-align: center;
     font-weight: 600;
     font-size: 16px;
@@ -91,11 +91,14 @@ p {
     border-width: 2px;
     background-color: white;
 }
-.sketchpad {
+#sketchpad {
     border-style: solid;
+    display: flex;
     border-width: 2px;
     width: 500px;
     height: 500px;
     border-radius: 16px;
     background-color: white;
 }
+
+.gridPixel {}

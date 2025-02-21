@@ -16,9 +16,9 @@
         <div class="input">
             <div class="size">
                 <div class="slider">
-                    <p class="label">Size Slider</p>
+                    <p id="displayDimensions">Size Slider</p>
                     <div class="slideContainer">
-                        <input type="range" min="1" max="100" value="50" class="slider" id="myRange"></div>
+                        <input type="range" min="1" max="10" value="50" class="slider" id="myRange"></div>
                 </div>
                 <p class="boxValues"> [___ by ____]</p>
             </div>
@@ -46,8 +46,9 @@
                 </div>
             </div>
         </div>
-        <div class="output"></div>
-            <div class="sketchpad"></div>
+        <div id="output">
+            <div id="sketchpad"></div>
+        </div>
     </div>
 </body>
 </html>
