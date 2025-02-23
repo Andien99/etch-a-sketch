@@ -34,6 +34,11 @@ h1 {
     gap:32px;
 }
 
+#gridDimensionText {
+    font-size: 32px;
+    font-weight: bold;
+}
+
 .slider {
     background-color: #219ebc;
     border-radius: 16px;
@@ -115,7 +120,7 @@ p {
     flex: 1;
     border-width: 1px;
     border-style: solid;
-    border-color: rgba(183, 92, 92, 0.388);
+    border-color: rgba(190, 190, 190, 0.25);
     flex-wrap: wrap;
     user-select: none;
 }
