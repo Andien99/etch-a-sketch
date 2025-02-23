@@ -1,21 +1,57 @@
 const output =document.getElementById('output')
 const sketchpad = document.getElementById('sketchpad');
-
 const slider = document.getElementById('myRange');
 let displayDimensions = document.getElementById('displayDimensions');
+const reset = document.getElementById('reset')
 
-//function will record slider value as it moves (check)
-//the function will add the sqrt to slide.value of empty divs that will act as a the pixels
-//divs will automatical have the flex:1 property to take the most amount of space using CCS and class selection
-//after each slider.value change, the function will delete all divs in the sketchpad container and reinput new divs equal to the value of new slide.value
-slider.addEventListener('mousedown',function() {
-    slider.addEventListener('mousemove',function() { 
-        console.log('slider value ' + slider.value);
-        let gridPixel = document.createElement('div');
-        gridPixel.style.width = "6px"
-        gridPixel.classList.add("gridPixel");
-        gridPixel.style.backgroundColor = "black"
-        sketchpad.appendChild(gridPixel);
-    })
+const blackColour = document.getElementById('blackColour')
+const blueColour = document.getElementById('blueColour')
+const greenColour = document.getElementById('greenColour')
+const redColour = document.getElementById('redColour')
+const eraser = document.getElementById('eraser')
+let currentColour = 'black'
+ 
+
+
+greenColour.addEventListener ('click', () => {
+    currentColour = '#90be6d'
 })
+blackColour.addEventListener ('click', () => {
+    currentColour = 'black'
+})
+blueColour.addEventListener ('click', () => {
+    currentColour = '#277da1'
+})
+redColour.addEventListener ('click', () => {
+    currentColour = '#f94144'
+})
+eraser.addEventListener ('click', () => {
+    currentColour = 'white'
+})
+
+//function to change colour on hover and setup the first 16x16 pixels of the sketchpad
+function firstInitialisation () {
+    for (j = 1; j <= 16; j++) {
+        let gridRows = document.createElement('div');
+            gridRows.classList.add("gridRows");
+            sketchpad.appendChild(gridRows);
+                for (i = 1; i <= 16; i++) {
+                    let gridPixel = document.createElement('div');
+                    gridPixel.classList.add("gridPixel");
+                    gridRows.appendChild(gridPixel);
+                    gridPixel.addEventListener('mouseover', () => {
+                        gridPixel.style.backgroundColor = currentColour
+                    })
+                    reset.addEventListener('click', () => {
+                    gridPixel.style.backgroundColor = "white"});
+                }
+    }
+}
+
+firstInitialisation ()
+
+
+
+
+
 
