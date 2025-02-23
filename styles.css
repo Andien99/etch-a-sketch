@@ -101,6 +101,7 @@ p {
     background-color: white;
     flex-wrap: wrap;
     flex-direction: column;
+    user-select: none;
 }
 
 #output {
@@ -116,6 +117,7 @@ p {
     border-style: solid;
     border-color: rgba(183, 92, 92, 0.388);
     flex-wrap: wrap;
+    user-select: none;
 }
 
 .gridRows {
@@ -123,4 +125,5 @@ p {
     display:flex;
     flex: 1;
     flex-wrap: wrap;
+    user-select: none;
 }

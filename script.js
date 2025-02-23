@@ -37,21 +37,24 @@ function firstInitialisation () {
             sketchpad.appendChild(gridRows);
                 for (i = 1; i <= 16; i++) {
                     let gridPixel = document.createElement('div');
+                    let isMouseDown = false;
                     gridPixel.classList.add("gridPixel");
                     gridRows.appendChild(gridPixel);
+                    sketchpad.addEventListener('mousedown', () => {
+                        isMouseDown = true;
+                    })
+
                     gridPixel.addEventListener('mouseover', () => {
-                        gridPixel.style.backgroundColor = currentColour
+                        if (isMouseDown == true) {
+                                gridPixel.style.backgroundColor = currentColour
+                            }
+                    });     
+                    sketchpad.addEventListener('mouseup', () => {
+                        isMouseDown = false;
                     })
                     reset.addEventListener('click', () => {
                     gridPixel.style.backgroundColor = "white"});
                 }
     }
 }
-
 firstInitialisation ()
-
-
-
-
-
-
